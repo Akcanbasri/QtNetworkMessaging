@@ -5,3 +5,10 @@ This project is a simple chat application using Qt for TCP server-client communi
 ![Server and Client UI](images/Servers.png)
 ![Terminal Output Before Chat](images/terminals.png)
 ![Terminal Output After Chat](images/termials_after_chat.png)
+
+
+# Serial Port Communication with Qt
+This project demonstrates a simple serial port communication application built using Qt. The application allows the user to connect to a specified serial port, send data, and receive data from the connected device. The interface includes fields for entering the port name and data to be sent, buttons to connect and send data, and displays for the connection status and received data. The application is designed to work with any serial port device, providing an easy way to test and debug serial communications.
+
+![Serial Port UI] (images/serial port.png)
+![fail Connection](images/terminals.png)
