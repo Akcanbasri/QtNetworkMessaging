@@ -27,7 +27,7 @@ void MainWindow::on_connectButton_clicked() { // Butona tıklandığında çağr
     serial->setPortName(ui->portNameEdit->text());
     serial->setBaudRate(QSerialPort::Baud9600);  // Seri haberleşmede veri hızının ayarlanması
     serial->setDataBits(QSerialPort::Data8);  // veri bitlerini 8 bit olarak ayarlar
-    serial->setParity(QSerialPort::NoParity); // Parite yok
+    serial->setParity(QSerialPort::NoParity); // Parite yok. Parite bitleri ile verinin doğruluğunu kontrol emmizi sağlar.
     serial->setStopBits(QSerialPort::OneStop);  // Dur biti 1 olarak verilir bu sayede alıcı iletimin bittiğini ve bir sonraki mesajın geleceğinden haberdar olur.
     serial->setFlowControl(QSerialPort::NoFlowControl); // akış kontrolu(donanım ve yazılım tabanlı) olmadığını ayarlarız.
 
