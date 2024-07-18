@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QSerialPort>
-#include <QSerialPortInfo>
+#include <QSerialPort> // QT içindeki seri port kütüphanesini çağırıyoruz.
+#include <QSerialPortInfo> // Seri Port bilgilerini elde etmek için QSerialPortInfo kütüphanesini çağırıyoruz.
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -13,17 +13,17 @@ class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    MainWindow(QWidget *parent = nullptr); // Constructor Fonkisyonu
+    ~MainWindow(); // Deconstructer Fonksiyonu
 
-private slots:
-    void on_connectButton_clicked();
-    void on_sendButton_clicked();
-    void on_readData();
+private slots: // pivot slot kullanmamız encapsualtion prensibine uymamız için. dışardan erişim olmadan sadece ihtiyacı kadar veri dışarıya açmak için private slots kullandık.
+    void on_connectButton_clicked(); // Connect Button tıklandığında çağrılan slot
+    void on_sendButton_clicked(); // Send Button tıklandığında çağrılan slot
+    void on_readData(); // seri porttan veri alındıktan sonra çağrılan slot
 
 private:
     Ui::MainWindow *ui;
-    QSerialPort *serial;
+    QSerialPort *serial; // donanım seviyesinde iletişim kurmak için QSerialPort nesnesine ihtiyaç duyarız.
 };
 
 #endif // MAINWINDOW_H
