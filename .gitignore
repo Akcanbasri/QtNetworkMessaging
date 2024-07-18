@@ -1,3 +1,4 @@
 # Ignore build directories in Client and Server folders
 Client/build/
 Server/build/
+SerialPort/build/
